@@ -4,7 +4,7 @@ from register import register_do
 app = Flask(__name__)
 
 # Define a route that listens to HTTP POST requests
-@app.route('/', methods=['POST'])
+@app.route('/register', methods=['POST'])
 def handle_request():
     request_content = request.get_json()
     result = register_do(request_content)
